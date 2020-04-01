@@ -17,6 +17,20 @@ time_limit_s = 60
 def compare_charging_strat(T, n_ev, t_dep, t_arr, p_max_evs, init_soc, dep_soc,
                           p_max_cs, step_time, elec_price):
     
+    """
+    Compare different charging strategies on a daily charging pb at the station
+    :param T: nber of time-slots
+    :param n_ev: nber of EVs
+    :param t_dep: vector of departure time-slots (of size n_ev)
+    :param t_arr: idem for arrival time-slots (of size n_ev)
+    :param p_max_evs: per EV maximal charging power (of size n_ev)
+    :param init_soc: initial SOC à t=0 (of size n_ev)
+    :param dep_soc: needed SOC at departure time (of size n_ev)
+    :param p_max_cs: maximal power allowed at the charging station
+    :param step_time: time step duration, in s
+    :param elec_price: vector of electricity prices (of size T)
+    """
+    
     # V1G
     print("V1G")
     print("before departure")
